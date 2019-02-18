@@ -1,0 +1,2 @@
+% If the list is empty, the sum should be zero and the result will be true
+sum-up-numbers-simple([], 0).
