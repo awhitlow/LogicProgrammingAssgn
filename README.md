@@ -1,0 +1,2 @@
+# LogicProgrammingAssgn
+Structures of Programming LanguageLogicProgramming Assignment
