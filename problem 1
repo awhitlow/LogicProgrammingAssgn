@@ -1,2 +1,10 @@
 % If the list is empty, the sum should be zero and the result will be true
 sum-up-numbers-simple([], 0).
+
+% If the list is not empty
+sum-up-numbers-simple([Value | Remainder], Sum) :-
+  % Check that the first value is a number
+	number(Value),
+  % Call the predicate again with the remainder of the list and the result of adding the previous values together
+	sum-up-numbers-simple(Remainder, Result),
+	Sum is Value + Result.
