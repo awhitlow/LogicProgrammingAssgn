@@ -1,2 +1,10 @@
 %If the list is empty, the sum is 0
 sum-up-numbers-general([], 0).
+
+%If the value in the list is a number 
+sum-up-numbers-general([Value | Remainder], Sum) :-
+	number(Value),
+  %Call the predicate again with the remainder of the list and sum of previous values as the arguments
+	sum-up-numbers-general(Remainder, Result),
+  %Definition of sum is the first value plus the result
+	Sum is Value + Result.
