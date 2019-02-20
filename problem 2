@@ -1,0 +1,2 @@
+%If the list is empty, the sum is 0
+sum-up-numbers-general([], 0).
