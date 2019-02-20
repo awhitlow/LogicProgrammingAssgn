@@ -8,3 +8,10 @@ sum-up-numbers-general([Value | Remainder], Sum) :-
 	sum-up-numbers-general(Remainder, Result),
   %Definition of sum is the first value plus the result
 	Sum is Value + Result.
+	
+%If the value in the list is not a number
+sum-up-numbers-general([Value | Remainder],Result) :-
+	not(number(Value)),
+	%Call the predicate recursively with the remainder of the list and the result 
+	%which is equal to the previous result
+	sum-up-numbers-general(Remainder,Result).
