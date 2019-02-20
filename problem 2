@@ -15,3 +15,10 @@ sum-up-numbers-general([Value | Remainder],Result) :-
 	%Call the predicate recursively with the remainder of the list and the result 
 	%which is equal to the previous result
 	sum-up-numbers-general(Remainder,Result).
+	
+%If the value in the list is a list
+sum-up-numbers-general([Value | Remainder], Result) :-
+	%Check if the head of the list is a list
+	is_list(Value),
+	%Recursively call the function with the head of the list and the previous result
+	sum-up-numbers-general(Value,Result).
