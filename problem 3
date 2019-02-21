@@ -1,1 +1,13 @@
+%If the first list is empty, the output is "false"
 min-above-min([],[L2],0). 
+
+%Predicate to find the minimum of a list 
+%If there is only one value in the list, it is the minimum
+findMin([Head], Head).
+%The head is the minimum of the list if it is less than the value that is found when the 
+%remainder of the list and minimum are used as arguments
+findMin([Head|Remainder], Head) :- 
+    findMin(Remainder, Minimum), Head < Minimum.
+%The calculated minimum is the minimum of the list if the head of the list is greater than the minimum value
+findMin([Head|Remainder], Minimum) :- 
+    findMin(Remainder, Minimum), Head >= Minimum.
