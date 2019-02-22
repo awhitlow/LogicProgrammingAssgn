@@ -1,5 +1,5 @@
-%If the first list is empty, the output is "false"
-min-above-min([],[L2],0). 
+%Compare which values are larger than the other
+findLarger(Val, Result) :- Result > Val. 
 
 %Predicate to find the minimum of a list 
 %If there is only one value in the list, it is the minimum
