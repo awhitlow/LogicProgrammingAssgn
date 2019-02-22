@@ -1,1 +1,4 @@
-
+common-unique-elements(L1,L2,N):-
+    member(N, L1),
+    member(N, L2).
+    
