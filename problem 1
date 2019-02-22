@@ -12,7 +12,7 @@ sum-up-numbers-simple([Value | Remainder], Sum) :-
 %If the list is not empty 
 sum-up-numbers-simple([Value | Remainder], Result) :-
 	% If the value encountered is not a number
-	not(number(Value)),
+	\+(number(Value)),
 	% Call the predicate again with the remainder and result, with the result simply
 	% equaling the previous result and not a newly calculated one
 	sum-up-numbers-simple(Remainder, Result).
