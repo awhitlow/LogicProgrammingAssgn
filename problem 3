@@ -1,3 +1,13 @@
+
+%Predicate to find the smallest value in L1 larger than the minimum in L2
+min-above-min(L1, L2, Result) :-
+  %Find the minimum of L2 by calling the findMin predicate
+  findMin(L2, L2Min), 
+  %True if LargerL1 is a list that contains all values of L1 that are larger than the minimum of L2
+  include(findLarger(L2Min), L1, LargerL1), 
+  %Find the minimum of the list of values larger than the minimum of L2
+  findMin(LargerL1, Result).
+
 %Compare which values are larger than the other
 findLarger(Val, Result) :- Result > Val. 
 
