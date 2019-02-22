@@ -11,7 +11,7 @@ sum-up-numbers-general([Value | Remainder], Sum) :-
 	
 %If the value in the list is not a number
 sum-up-numbers-general([Value | Remainder],Result) :-
-	not(number(Value)),
+	\+(number(Value)),
 	%Call the predicate recursively with the remainder of the list and the result 
 	%which is equal to the previous result
 	sum-up-numbers-general(Remainder,Result).
